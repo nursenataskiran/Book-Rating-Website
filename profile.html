@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>📚 Book Rating Site</h1>
+    <nav class="nav">
+      <a href="book-rating-homepage.html" class="nav-link">Home</a>
+      <a href="#" class="nav-link active">Profile</a>
+      <a href="#" class="nav-link logout" onclick="handleLogout()">Logout</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="profile-section">
+      <div class="profile-header">
+        <div class="profile-image-container">
+          <div class="profile-image-wrapper">
+            <img src="https://via.placeholder.com/150" alt="Profile Picture" id="profileImage" class="profile-image">
+          </div>
+          <div class="profile-image-buttons">
+            <input type="file" id="imageUpload" accept="image/*" style="display: none">
+            <button onclick="document.getElementById('imageUpload').click()" class="photo-btn">Change Photo</button>
+            <button onclick="removeProfilePhoto()" class="photo-btn remove-btn">Remove Photo</button>
+          </div>
+        </div>
+        <div class="profile-details">
+          <h2>Welcome, <span id="userName">User</span>!</h2>
+          <p class="email" id="userEmail">user@example.com</p>
+        </div>
+      </div>
+
+
+
+      <div class="rated-books-section">
+        <h3>Your Rated Books</h3>
+        <div id="ratedBooksContainer" class="rated-books-container">
+          <!-- Rated books will be displayed here -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Book Rating Site. All rights reserved.</p>
+  </footer>
+
+  <script src="profile.js"></script>
+</body>
+</html>

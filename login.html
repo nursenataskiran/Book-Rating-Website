@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Register Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Giriş Ekranı -->
+    <div class="card" id="login-card">
+      <h2 class="title">Login</h2>
+      <form id="login-form" class="form">
+        <input id="email" type="email" placeholder="Email" required class="input-field">
+        <div class="password-container">
+          <input id="password" type="password" placeholder="Password" required class="input-field">
+          <button type="button" class="toggle-password" onclick="togglePassword()">👁️</button>
+        </div>
+        <button type="submit" class="button">Login</button>
+        <p class="switch-text">
+          Don't have an account? 
+          <span class="switch-link" onclick="showRegister()">Register</span>
+        </p>
+      </form>
+    </div>
+
+    <!-- Kaydolma Ekranı -->
+    <div class="card hidden" id="register-card">
+      <h2 class="title">Register</h2>
+      <form id="register-form" class="form">
+        <input id="fullName" type="text" placeholder="Full Name" required class="input-field">
+        <input id="registerEmail" type="email" placeholder="Email" required class="input-field">
+        <div class="password-container">
+          <input id="register-password" type="password" placeholder="Password" required class="input-field">
+          <button type="button" class="toggle-password" onclick="toggleRegisterPassword()">👁️</button>
+        </div>
+        <button type="submit" class="button">Register</button>
+        <p class="switch-text">
+          Already have an account? 
+          <span class="switch-link" onclick="showLogin()">Login</span>
+        </p>
+      </form>
+    </div>
+  </div>
+
+
+</body>
+</html>
